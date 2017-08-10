@@ -4,20 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding"
     tools:context="me.bayupaoh.screeningtest.view.main.MainActivity">
 
-    <EditText
-        android:id="@+id/main_edt_name"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:hint="@string/main_edt_input_nama" />
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_home" />
 
-    <Button
-        android:id="@+id/main_btn_next"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_edt_name"
-        android:text="@string/main_btn_next" />
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding">
+
+        <TextView
+            android:id="@+id/main_txt_selamatdatang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding"
+            android:gravity="center"
+            android:text="Selamat Datang!"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/main_txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_txt_selamatdatang"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Sertakan gambar profil Anda untuk melengkapi profil."
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/main_profile_image"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_centerInParent="true"
+            android:src="#50ffffff"
+            app:civ_border_color="#FFFF"
+            app:civ_border_width="2dp" />
+
+        <EditText
+            android:id="@+id/main_edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_profile_image"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@android:color/white"
+            android:hint="@string/main_edt_input_nama"
+            android:padding="@dimen/padding"
+            android:shadowColor="#ffffff"
+            android:textColor="#ffffff"
+            android:textColorHint="@android:color/white" />
+
+        <Button
+            android:id="@+id/main_btn_next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_edt_name"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@drawable/button_border"
+            android:padding="@dimen/padding"
+            android:text="@string/main_btn_next"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
 </RelativeLayout>

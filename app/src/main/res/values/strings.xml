@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Screening Test</string>
     <string name="main_edt_input_nama">Masukan Nama</string>
-    <string name="main_btn_next">Next</string>
+    <string name="main_btn_next">Selesai</string>
     <string name="main_message_error">Nama belum terisi</string>
     <string name="chooseevent_txt_dummy_nama">Nama : Bayu Poah</string>
     <string name="choose_event_btn_guest">Guest</string>
     <string name="choose_event_btn_event">Event</string>
+    <string name="dummy_desc">Using Shape drawable we can create custom shapes. Shape drawables provide this basic shapes: Rectangle, Oval, Line, and Ring. This all shapes have this below attributes</string>
+    <string name="map_event">Map Event</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

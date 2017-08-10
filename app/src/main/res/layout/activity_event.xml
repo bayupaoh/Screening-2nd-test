@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding"
+    android:orientation="vertical"
     tools:context="me.bayupaoh.screeningtest.view.event.EventActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/event_rec_event"
+    <include layout="@layout/toolbar" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/event_rec_event"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:padding="@dimen/padding" />
+
+        <FrameLayout
+            android:id="@+id/event_container_body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"/>
+    </RelativeLayout>
+</LinearLayout>
